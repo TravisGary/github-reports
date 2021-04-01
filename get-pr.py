@@ -10,7 +10,7 @@ g = Github(token)
 r = raw_input("org/repo: ")
 repo = g.get_repo(r)
 
-with open("github-teleport-merges.csv", "w") as csvFile:
+with open("github-pr-merged.csv", "w") as csvFile:
     fieldnames = ['number', 'closed_at', 'url']
     writer = csv.DictWriter(csvFile, fieldnames=fieldnames)
     writer.writeheader()
